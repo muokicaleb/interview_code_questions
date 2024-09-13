@@ -20,8 +20,6 @@ def shuffle_cards(list_cards):
             second_pile.insert(0, card)
         else:
             second_pile.append(card)
-            
-
     return second_pile
 
 if __name__ == '__main__':
