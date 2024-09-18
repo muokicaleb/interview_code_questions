@@ -34,4 +34,15 @@ def merge_remove_duplicates(lst1, lst2):
 
     return lst1
 
-print(merge_remove_duplicates([1, 2, 3], [3, 4, 5]))
+#print(merge_remove_duplicates([1, 2, 3], [3, 4, 5]))
+
+
+"""Write a Python function that rotates a list to the right by n positions."""
+
+def rotate_right(lst, n):
+    n = n % len(lst)  
+    print(lst[n:])
+    return lst[-n:] + lst[:-n]
+
+#print(rotate_right([1,2,3,4,5],2))
+
