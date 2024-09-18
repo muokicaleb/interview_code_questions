@@ -99,6 +99,16 @@ def array_symmetric(lst):
 def flatten_array(lst):
     return [element for row in lst for element in row]
 
-print(flatten_array([[1, 2, 3], 
-          [2, 5, 6], 
-          [3, 6, 9]]))
+# print(flatten_array([[1, 2, 3], 
+#           [2, 5, 6], 
+#           [3, 6, 9]]))
+
+"""write a function that normalizes a 1D array"""
+
+def norm_array(lst):
+    min_val = min(lst)
+    max_val = max(lst)
+    
+    return [round((x - min_val) / (max_val - min_val), 2) for x in lst]
+
+print(norm_array([2, 4, 6, 8]))
