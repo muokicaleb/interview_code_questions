@@ -90,7 +90,15 @@ def array_symmetric(lst):
                 return False 
     return True
             
-print(array_symmetric([[1, 2, 3], 
+# print(array_symmetric([[1, 2, 3], 
+#           [2, 5, 6], 
+#           [3, 6, 9]]))
+
+"""Write a Python function that flattens a 3D array into a 1D array.""" 
+
+def flatten_array(lst):
+    return [element for row in lst for element in row]
+
+print(flatten_array([[1, 2, 3], 
           [2, 5, 6], 
           [3, 6, 9]]))
-
