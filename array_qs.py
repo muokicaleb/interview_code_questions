@@ -55,3 +55,42 @@ def multiply_by_index(lst):
 
 #print(multiply_by_index([10, 20, 30, 40]))
 
+"""Write a Python function that returns the sum of the diagonal elements of a 2D array."""
+def diag_sum(lst):
+    n = len(lst)
+    sum = 0
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                sum += lst[i][j]
+    return sum
+
+#print(diag_sum([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+
+"""write a function that returns a new 2D array where all elements are replaced by their squared values."""
+
+
+def sqr_items(lst):
+    n = len(lst) 
+    for i in range(n):
+        for j in range(n):
+            lst[i][j] = lst[i][j]*lst[i][j]
+    
+    return lst
+
+#print(sqr_items([[1, 2], [3, 4]]))
+
+"""Create a NumPy function that checks if a given 2D array is symmetric"""
+
+def array_symmetric(lst):
+    n = len(lst)
+    for i in range(n):
+        for j in range(n):
+            if lst[i][j] != lst[j][i]:
+                return False 
+    return True
+            
+print(array_symmetric([[1, 2, 3], 
+          [2, 5, 6], 
+          [3, 6, 9]]))
+
