@@ -46,3 +46,12 @@ def rotate_right(lst, n):
 
 #print(rotate_right([1,2,3,4,5],2))
 
+"""create a function that takes a 1D array and returns a new array where each element is multiplied by its index"""
+
+def multiply_by_index(lst):
+    result = [i * lst[i] for i in range(len(lst))]
+
+    return result
+
+#print(multiply_by_index([10, 20, 30, 40]))
+
