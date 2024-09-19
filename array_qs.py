@@ -111,4 +111,38 @@ def norm_array(lst):
     
     return [round((x - min_val) / (max_val - min_val), 2) for x in lst]
 
-print(norm_array([2, 4, 6, 8]))
+#print(norm_array([2, 4, 6, 8]))
+
+
+### Print only columns ### 
+
+def print_columns(lst):
+    
+    n = len(lst)
+    
+    columns_only = []
+    for r in range(n):
+        column = []
+        for c in range(n):
+            column.append(lst[r][c])
+        columns_only.append(column)
+    return columns_only
+
+
+# print(print_columns([[1, 2, 3], 
+#           [2, 5, 6], 
+#           [3, 6, 9]]))
+
+import random 
+
+rand_num = random.randint(1, 100)
+user_guess = 0
+
+while user_guess != rand_num:
+    user_guess = int(input("guess a num "))
+    if user_guess > rand_num:
+        print("Guess too high")
+    elif user_guess < rand_num:
+        print("Guess too Low")
+    else:
+        print(f"Congratulations {user_guess} is the correct guess")
