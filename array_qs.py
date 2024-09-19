@@ -133,16 +133,33 @@ def print_columns(lst):
 #           [2, 5, 6], 
 #           [3, 6, 9]]))
 
-import random 
+# import random 
 
-rand_num = random.randint(1, 100)
-user_guess = 0
+# rand_num = random.randint(1, 100)
+# user_guess = 0
 
-while user_guess != rand_num:
-    user_guess = int(input("guess a num "))
-    if user_guess > rand_num:
-        print("Guess too high")
-    elif user_guess < rand_num:
-        print("Guess too Low")
-    else:
-        print(f"Congratulations {user_guess} is the correct guess")
+# while user_guess != rand_num:
+#     user_guess = int(input("guess a num "))
+#     if user_guess > rand_num:
+#         print("Guess too high")
+#     elif user_guess < rand_num:
+#         print("Guess too Low")
+#     else:
+#         print(f"Congratulations {user_guess} is the correct guess")
+
+"""Write a Python program that asks the user for a positive integer n and prints the first n numbers of the Fibonacci sequence using a while loop."""
+
+def fibonacci(n):
+    n1, n2 = 0, 1
+
+    count = 0
+    
+    result = []
+    while count < n:
+        result.append(n1)
+        n1, n2 = n2, n1 + n2 
+        count += 1
+
+    return result
+        
+print(fibonacci(7))
